@@ -1,0 +1,9 @@
+{"event": "run_dir_ready", "output_dir": "runs\\aspirin-demo-4"}
+{"event": "stage_strategies_start"}
+{"event": "stage_strategies_ok", "run_id": "f028be85be2d9602", "summary": {"stage": "strategies", "present": true, "payload_type": "dict", "payload_keys": ["origin", "strategies"], "duration_seconds": 8.046862}}
+{"event": "strategies_read_ok", "strategy_count": 3}
+{"event": "stage_routes_start"}
+{"event": "stage_routes_failed", "error": "every item in stage 'routes' failed; first failure was ValueError: Route Builder exhausted 5 proposals for step 1: ValueError: step S1: execute_ops failed: Op [0] add_group: ValueError: add_group(idx=10, '*Cl', order=1) produced an invalid molecule: Explicit valence for atom # 10 C, 5, is greater than permitted\n  op_dict: {'op': 'add_group', 'map_idx': 11, 'fragment_smiles': '*Cl', 'order': 1}"}
+{"event": "run_report_written", "status": "failed", "failed_stage": "routes"}
+{"event": "manifest_validated", "status": "failed", "completed_stages": ["strategies"], "artifact_digests_match": true}
+{"event": "report_enriched", "generated_strategies": 3, "llm_calls": 21, "total_tokens": 65886, "follow_up": "runs/aspirin-demo-4-seed reached step 1 then failed at step 2"}

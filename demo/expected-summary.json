@@ -1,0 +1,19 @@
+{
+  "target_id": "nature-demo",
+  "status": "complete",
+  "completed_stages": [
+    "strategies",
+    "routes",
+    "reviewed_routes",
+    "analyses",
+    "stitched_routes"
+  ],
+  "strategy_origin": "generated",
+  "strategy_count": 1,
+  "route_count": 1,
+  "route_steps": 1,
+  "critic_resolved": true,
+  "analysis_category": "acceptable",
+  "replayed_llm_calls": 5,
+  "leaf_completion": "disabled for offline demo"
+}

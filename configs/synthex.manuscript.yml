@@ -1,0 +1,47 @@
+format_version: synthex-config-1.0
+profile: manuscript
+
+llm:
+  provider: gemini
+  # Methods default. Use `--model gemini-3.7-flash` for a staged or full
+  # exploratory run without editing the manuscript profile.
+  model: gemini-3.1-pro-preview
+  use_vertex_ai: false
+  timeout_seconds: 600
+  max_attempts: 3
+  thinking_level: null
+
+agents:
+  strategy_count: 3
+  route_step_limit: 25
+  route_proposal_attempts: 3
+  # Maximum Editor revisions. The Critic may terminate the loop earlier;
+  # zero skips both Critic and Editor for the route stage.
+  edit_iteration_limit: 6
+  editor_turn_limit: 60
+  strategy_temperature: 0.1
+  route_temperature: 0.3
+  critic_temperature: 0.1
+  editor_temperature: 0.3
+  analyst_temperature: 0.3
+  strategy_thinking_level: null
+  route_thinking_level: medium
+  critic_thinking_level: medium
+  editor_thinking_level: medium
+  analyst_thinking_level: null
+
+completion:
+  enabled: true
+  aizynthfinder_config: ${SYNTHEX_AIZYNTHFINDER_CONFIG}
+  # null selects every entry loaded by the ordinary AiZynthFinder config,
+  # including its template and ring-breaker expansion policies.
+  stocks: null
+  expansion_policies: null
+  filter_policies: null
+  budget:
+    max_transforms: 6
+    iteration_limit: 500
+    time_limit: 1200
+    return_first: true
+
+external_asset_manifest: ${SYNTHEX_ASSET_MANIFEST}

@@ -1,0 +1,8 @@
+{
+  "format_version": "reactionjson-1.0",
+  "product": "[CH3:1][CH2:2][CH2:3][CH3:4]",
+  "operations": [
+    {"op": "break_bond", "map_a": 2, "map_b": 3}
+  ],
+  "description": "Disconnect the central carbon-carbon bond"
+}

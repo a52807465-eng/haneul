@@ -1,0 +1,85 @@
+cff-version: 1.2.0
+title: "SynthEx: manuscript software for strategy-first synthesis planning"
+message: "Please cite the manuscript when using this software."
+type: software
+authors:
+  - family-names: Armstrong
+    given-names: Daniel
+  - family-names: Nguyen
+    given-names: Xuan-Vu
+  - family-names: Susanu
+    given-names: Octavian
+  - family-names: Gibberd
+    given-names: Gabriel
+  - family-names: Neukomm
+    given-names: Théo A.
+  - family-names: Strunden
+    given-names: Taddäus E. N.
+  - family-names: Forster
+    given-names: Dan
+  - family-names: Delattre
+    given-names: Morgane
+  - family-names: Teh
+    given-names: Yun Hao Shawn
+  - family-names: Rols
+    given-names: Clément
+  - family-names: Federice
+    given-names: John G.
+  - family-names: Leatherwood
+    given-names: Hayden M.
+  - family-names: Barnes
+    given-names: M. Lavelle
+  - family-names: Dobbelaere
+    given-names: Maarten R.
+  - family-names: Wipf
+    given-names: Peter
+  - family-names: Njardarson
+    given-names: Jon T.
+  - family-names: Zhu
+    given-names: Jieping
+  - family-names: Schwaller
+    given-names: Philippe
+version: 0.1.0
+date-released: 2026-08-25
+license: MIT
+repository-code: "https://github.com/schwallergroup/SynthEx"
+preferred-citation:
+  type: article
+  title: "Strategy-first synthesis planning for complex natural products"
+  authors:
+    - family-names: Armstrong
+      given-names: Daniel
+    - family-names: Nguyen
+      given-names: Xuan-Vu
+    - family-names: Susanu
+      given-names: Octavian
+    - family-names: Gibberd
+      given-names: Gabriel
+    - family-names: Neukomm
+      given-names: Théo A.
+    - family-names: Strunden
+      given-names: Taddäus E. N.
+    - family-names: Forster
+      given-names: Dan
+    - family-names: Delattre
+      given-names: Morgane
+    - family-names: Teh
+      given-names: Yun Hao Shawn
+    - family-names: Rols
+      given-names: Clément
+    - family-names: Federice
+      given-names: John G.
+    - family-names: Leatherwood
+      given-names: Hayden M.
+    - family-names: Barnes
+      given-names: M. Lavelle
+    - family-names: Dobbelaere
+      given-names: Maarten R.
+    - family-names: Wipf
+      given-names: Peter
+    - family-names: Njardarson
+      given-names: Jon T.
+    - family-names: Zhu
+      given-names: Jieping
+    - family-names: Schwaller
+      given-names: Philippe

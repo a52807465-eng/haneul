@@ -1,0 +1,113 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SynthEx benchmark interface 1.0",
+  "$defs": {
+    "BenchmarkTarget": {
+      "additionalProperties": false,
+      "properties": {
+        "format_version": {
+          "const": "benchmark-target-1.0",
+          "default": "benchmark-target-1.0",
+          "title": "Format Version",
+          "type": "string"
+        },
+        "target_id": {
+          "title": "Target Id",
+          "type": "string"
+        },
+        "smiles": {
+          "title": "Smiles",
+          "type": "string"
+        },
+        "constraint": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Constraint"
+        }
+      },
+      "required": [
+        "target_id",
+        "smiles"
+      ],
+      "title": "BenchmarkTarget",
+      "type": "object"
+    },
+    "BenchmarkResult": {
+      "additionalProperties": false,
+      "properties": {
+        "format_version": {
+          "const": "benchmark-result-1.0",
+          "default": "benchmark-result-1.0",
+          "title": "Format Version",
+          "type": "string"
+        },
+        "target_id": {
+          "title": "Target Id",
+          "type": "string"
+        },
+        "status": {
+          "enum": [
+            "complete",
+            "failed"
+          ],
+          "title": "Status",
+          "type": "string"
+        },
+        "run_manifest": {
+          "title": "Run Manifest",
+          "type": "string"
+        },
+        "strategic_routes": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Strategic Routes"
+        },
+        "stitched_routes": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Stitched Routes"
+        },
+        "failure_category": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Failure Category"
+        }
+      },
+      "required": [
+        "target_id",
+        "status",
+        "run_manifest"
+      ],
+      "title": "BenchmarkResult",
+      "type": "object"
+    }
+  }
+}

@@ -1,0 +1,260 @@
+{
+  "$defs": {
+    "ArtifactReference": {
+      "additionalProperties": false,
+      "properties": {
+        "path": {
+          "title": "Path",
+          "type": "string"
+        },
+        "sha256": {
+          "title": "Sha256",
+          "type": "string"
+        },
+        "parent_sha256": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Parent Sha256"
+        }
+      },
+      "required": [
+        "path",
+        "sha256"
+      ],
+      "title": "ArtifactReference",
+      "type": "object"
+    },
+    "Failure": {
+      "additionalProperties": false,
+      "properties": {
+        "stage": {
+          "title": "Stage",
+          "type": "string"
+        },
+        "category": {
+          "title": "Category",
+          "type": "string"
+        },
+        "message": {
+          "title": "Message",
+          "type": "string"
+        }
+      },
+      "required": [
+        "stage",
+        "category",
+        "message"
+      ],
+      "title": "Failure",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "format_version": {
+      "const": "run-manifest-1.0",
+      "default": "run-manifest-1.0",
+      "title": "Format Version",
+      "type": "string"
+    },
+    "run_id": {
+      "title": "Run Id",
+      "type": "string"
+    },
+    "target": {
+      "title": "Target",
+      "type": "string"
+    },
+    "target_id": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Target Id"
+    },
+    "constraint": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Constraint"
+    },
+    "input_sha256": {
+      "title": "Input Sha256",
+      "type": "string"
+    },
+    "config": {
+      "additionalProperties": true,
+      "title": "Config",
+      "type": "object"
+    },
+    "config_sha256": {
+      "title": "Config Sha256",
+      "type": "string"
+    },
+    "code_revision": {
+      "title": "Code Revision",
+      "type": "string"
+    },
+    "dependency_versions": {
+      "additionalProperties": {
+        "type": "string"
+      },
+      "title": "Dependency Versions",
+      "type": "object"
+    },
+    "dependency_lock_sha256": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "title": "Dependency Lock Sha256"
+    },
+    "provider": {
+      "title": "Provider",
+      "type": "string"
+    },
+    "model": {
+      "title": "Model",
+      "type": "string"
+    },
+    "prompt_versions": {
+      "additionalProperties": {
+        "type": "string"
+      },
+      "title": "Prompt Versions",
+      "type": "object"
+    },
+    "prompt_sha256": {
+      "additionalProperties": {
+        "type": "string"
+      },
+      "title": "Prompt Sha256",
+      "type": "object"
+    },
+    "external_assets": {
+      "additionalProperties": {
+        "type": "string"
+      },
+      "title": "External Assets",
+      "type": "object"
+    },
+    "stage_configs": {
+      "additionalProperties": {
+        "additionalProperties": true,
+        "type": "object"
+      },
+      "title": "Stage Configs",
+      "type": "object"
+    },
+    "stage_config_sha256": {
+      "additionalProperties": {
+        "type": "string"
+      },
+      "title": "Stage Config Sha256",
+      "type": "object"
+    },
+    "llm_usage": {
+      "additionalProperties": {
+        "type": "integer"
+      },
+      "title": "Llm Usage",
+      "type": "object"
+    },
+    "stage_durations_seconds": {
+      "additionalProperties": {
+        "type": "number"
+      },
+      "title": "Stage Durations Seconds",
+      "type": "object"
+    },
+    "status": {
+      "default": "running",
+      "enum": [
+        "running",
+        "partial",
+        "complete",
+        "failed"
+      ],
+      "title": "Status",
+      "type": "string"
+    },
+    "current_stage": {
+      "default": "created",
+      "title": "Current Stage",
+      "type": "string"
+    },
+    "completed_stages": {
+      "items": {
+        "type": "string"
+      },
+      "title": "Completed Stages",
+      "type": "array"
+    },
+    "artifacts": {
+      "additionalProperties": {
+        "$ref": "#/$defs/ArtifactReference"
+      },
+      "title": "Artifacts",
+      "type": "object"
+    },
+    "failure": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/Failure"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "created_at": {
+      "title": "Created At",
+      "type": "string"
+    },
+    "updated_at": {
+      "title": "Updated At",
+      "type": "string"
+    }
+  },
+  "required": [
+    "run_id",
+    "target",
+    "input_sha256",
+    "config",
+    "config_sha256",
+    "code_revision",
+    "dependency_versions",
+    "provider",
+    "model",
+    "prompt_versions",
+    "prompt_sha256",
+    "created_at",
+    "updated_at"
+  ],
+  "title": "RunManifest",
+  "type": "object"
+}

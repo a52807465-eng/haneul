@@ -1,0 +1,481 @@
+{
+  "$defs": {
+    "AddBond": {
+      "additionalProperties": false,
+      "properties": {
+        "op": {
+          "const": "add_bond",
+          "title": "Op",
+          "type": "string"
+        },
+        "map_a": {
+          "exclusiveMinimum": 0,
+          "title": "Map A",
+          "type": "integer"
+        },
+        "map_b": {
+          "exclusiveMinimum": 0,
+          "title": "Map B",
+          "type": "integer"
+        },
+        "order": {
+          "default": 1,
+          "enum": [
+            1,
+            2,
+            3
+          ],
+          "title": "Order",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "op",
+        "map_a",
+        "map_b"
+      ],
+      "title": "AddBond",
+      "type": "object"
+    },
+    "AddGroup": {
+      "additionalProperties": false,
+      "properties": {
+        "op": {
+          "const": "add_group",
+          "title": "Op",
+          "type": "string"
+        },
+        "map_idx": {
+          "exclusiveMinimum": 0,
+          "title": "Map Idx",
+          "type": "integer"
+        },
+        "fragment_smiles": {
+          "minLength": 1,
+          "title": "Fragment Smiles",
+          "type": "string"
+        },
+        "order": {
+          "default": 1,
+          "enum": [
+            1,
+            2,
+            3
+          ],
+          "title": "Order",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "op",
+        "map_idx",
+        "fragment_smiles"
+      ],
+      "title": "AddGroup",
+      "type": "object"
+    },
+    "BreakBond": {
+      "additionalProperties": false,
+      "properties": {
+        "op": {
+          "const": "break_bond",
+          "title": "Op",
+          "type": "string"
+        },
+        "map_a": {
+          "exclusiveMinimum": 0,
+          "title": "Map A",
+          "type": "integer"
+        },
+        "map_b": {
+          "exclusiveMinimum": 0,
+          "title": "Map B",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "op",
+        "map_a",
+        "map_b"
+      ],
+      "title": "BreakBond",
+      "type": "object"
+    },
+    "ChangeAtom": {
+      "additionalProperties": false,
+      "properties": {
+        "op": {
+          "const": "change_atom",
+          "title": "Op",
+          "type": "string"
+        },
+        "map_idx": {
+          "exclusiveMinimum": 0,
+          "title": "Map Idx",
+          "type": "integer"
+        },
+        "symbol": {
+          "minLength": 1,
+          "title": "Symbol",
+          "type": "string"
+        }
+      },
+      "required": [
+        "op",
+        "map_idx",
+        "symbol"
+      ],
+      "title": "ChangeAtom",
+      "type": "object"
+    },
+    "ChangeBondOrder": {
+      "additionalProperties": false,
+      "properties": {
+        "op": {
+          "const": "change_bond_order",
+          "title": "Op",
+          "type": "string"
+        },
+        "map_a": {
+          "exclusiveMinimum": 0,
+          "title": "Map A",
+          "type": "integer"
+        },
+        "map_b": {
+          "exclusiveMinimum": 0,
+          "title": "Map B",
+          "type": "integer"
+        },
+        "delta": {
+          "enum": [
+            -2,
+            -1,
+            1,
+            2
+          ],
+          "title": "Delta",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "op",
+        "map_a",
+        "map_b",
+        "delta"
+      ],
+      "title": "ChangeBondOrder",
+      "type": "object"
+    },
+    "ClearStereocenter": {
+      "additionalProperties": false,
+      "properties": {
+        "op": {
+          "const": "clear_stereocenter",
+          "title": "Op",
+          "type": "string"
+        },
+        "map_idx": {
+          "exclusiveMinimum": 0,
+          "title": "Map Idx",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "op",
+        "map_idx"
+      ],
+      "title": "ClearStereocenter",
+      "type": "object"
+    },
+    "InvertStereocenter": {
+      "additionalProperties": false,
+      "properties": {
+        "op": {
+          "const": "invert_stereocenter",
+          "title": "Op",
+          "type": "string"
+        },
+        "map_idx": {
+          "exclusiveMinimum": 0,
+          "title": "Map Idx",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "op",
+        "map_idx"
+      ],
+      "title": "InvertStereocenter",
+      "type": "object"
+    },
+    "RemoveGroup": {
+      "additionalProperties": false,
+      "properties": {
+        "op": {
+          "const": "remove_group",
+          "title": "Op",
+          "type": "string"
+        },
+        "map_idx": {
+          "exclusiveMinimum": 0,
+          "title": "Map Idx",
+          "type": "integer"
+        },
+        "map_root_idx": {
+          "exclusiveMinimum": 0,
+          "title": "Map Root Idx",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "op",
+        "map_idx",
+        "map_root_idx"
+      ],
+      "title": "RemoveGroup",
+      "type": "object"
+    },
+    "RouteStep": {
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "pattern": "^S[1-9][0-9]*$",
+          "title": "Id",
+          "type": "string"
+        },
+        "description": {
+          "default": "",
+          "title": "Description",
+          "type": "string"
+        },
+        "operations": {
+          "items": {
+            "discriminator": {
+              "mapping": {
+                "add_bond": "#/$defs/AddBond",
+                "add_group": "#/$defs/AddGroup",
+                "break_bond": "#/$defs/BreakBond",
+                "change_atom": "#/$defs/ChangeAtom",
+                "change_bond_order": "#/$defs/ChangeBondOrder",
+                "clear_stereocenter": "#/$defs/ClearStereocenter",
+                "invert_stereocenter": "#/$defs/InvertStereocenter",
+                "remove_group": "#/$defs/RemoveGroup",
+                "set_bond_stereo": "#/$defs/SetBondStereo",
+                "set_explicit_h": "#/$defs/SetExplicitH"
+              },
+              "propertyName": "op"
+            },
+            "oneOf": [
+              {
+                "$ref": "#/$defs/BreakBond"
+              },
+              {
+                "$ref": "#/$defs/AddBond"
+              },
+              {
+                "$ref": "#/$defs/ChangeBondOrder"
+              },
+              {
+                "$ref": "#/$defs/ChangeAtom"
+              },
+              {
+                "$ref": "#/$defs/SetExplicitH"
+              },
+              {
+                "$ref": "#/$defs/AddGroup"
+              },
+              {
+                "$ref": "#/$defs/RemoveGroup"
+              },
+              {
+                "$ref": "#/$defs/InvertStereocenter"
+              },
+              {
+                "$ref": "#/$defs/ClearStereocenter"
+              },
+              {
+                "$ref": "#/$defs/SetBondStereo"
+              }
+            ]
+          },
+          "minItems": 1,
+          "title": "Operations",
+          "type": "array"
+        },
+        "rationale": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Rationale"
+        },
+        "conditions": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Conditions"
+        },
+        "kind": {
+          "anyOf": [
+            {
+              "enum": [
+                "key",
+                "supporting"
+              ],
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Kind"
+        },
+        "metadata": {
+          "additionalProperties": true,
+          "title": "Metadata",
+          "type": "object"
+        }
+      },
+      "required": [
+        "id",
+        "operations"
+      ],
+      "title": "RouteStep",
+      "type": "object"
+    },
+    "SetBondStereo": {
+      "additionalProperties": false,
+      "properties": {
+        "op": {
+          "const": "set_bond_stereo",
+          "title": "Op",
+          "type": "string"
+        },
+        "map_a": {
+          "exclusiveMinimum": 0,
+          "title": "Map A",
+          "type": "integer"
+        },
+        "map_b": {
+          "exclusiveMinimum": 0,
+          "title": "Map B",
+          "type": "integer"
+        },
+        "stereo": {
+          "enum": [
+            "E",
+            "Z"
+          ],
+          "title": "Stereo",
+          "type": "string"
+        },
+        "map_ref_a": {
+          "anyOf": [
+            {
+              "exclusiveMinimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Map Ref A"
+        },
+        "map_ref_b": {
+          "anyOf": [
+            {
+              "exclusiveMinimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Map Ref B"
+        }
+      },
+      "required": [
+        "op",
+        "map_a",
+        "map_b",
+        "stereo"
+      ],
+      "title": "SetBondStereo",
+      "type": "object"
+    },
+    "SetExplicitH": {
+      "additionalProperties": false,
+      "properties": {
+        "op": {
+          "const": "set_explicit_h",
+          "title": "Op",
+          "type": "string"
+        },
+        "map_idx": {
+          "exclusiveMinimum": 0,
+          "title": "Map Idx",
+          "type": "integer"
+        },
+        "n": {
+          "minimum": 0,
+          "title": "N",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "op",
+        "map_idx",
+        "n"
+      ],
+      "title": "SetExplicitH",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "description": "A linear, editable synthesis route in RouteJSON 1.0.",
+  "properties": {
+    "format_version": {
+      "const": "routejson-1.0",
+      "default": "routejson-1.0",
+      "title": "Format Version",
+      "type": "string"
+    },
+    "target": {
+      "description": "Atom-mapped target SMILES",
+      "minLength": 1,
+      "title": "Target",
+      "type": "string"
+    },
+    "steps": {
+      "items": {
+        "$ref": "#/$defs/RouteStep"
+      },
+      "title": "Steps",
+      "type": "array"
+    },
+    "metadata": {
+      "additionalProperties": true,
+      "title": "Metadata",
+      "type": "object"
+    }
+  },
+  "required": [
+    "target"
+  ],
+  "title": "Route",
+  "type": "object"
+}

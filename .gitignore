@@ -1,0 +1,29 @@
+# OS / Python
+.DS_Store
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.venv/
+dist/
+build/
+tmp/
+*.egg-info/
+
+# Secrets
+.env
+.env.*
+!.env.example
+*.ses
+
+# Execution outputs (never publish)
+runs/
+reports/
+*.log
+!examples/**/*.log
+
+# Project-specific
+synthex_logs/
+synthelite_logs/
+.wheel-smoke/

@@ -1,0 +1,28 @@
+name: ci
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  offline:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v6
+        with:
+          version: "0.12.9"
+          python-version: "3.11.16"
+          enable-cache: true
+      - run: uv sync --frozen --extra dev
+      - run: uv run pytest
+      - run: uv run ruff format --check src tests demo
+      - run: uv run ruff check src tests demo
+      - run: uv run mypy
+      - run: uv run python demo/run_demo.py --output runs/ci-demo
+      - run: uv run synthex validate-run runs/ci-demo
+      - run: uv run python -m build
+      - run: uv venv --python 3.11 .wheel-smoke
+      - run: uv pip install --python .wheel-smoke/bin/python dist/synthex-0.1.0-py3-none-any.whl
+      - run: .wheel-smoke/bin/synthex reaction validate examples/reactionjson/bond-break.json
+      - run: .wheel-smoke/bin/synthex route validate examples/routejson/two-step-route.json

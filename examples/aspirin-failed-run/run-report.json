@@ -1,0 +1,406 @@
+{
+  "run_type": "synthex-solar-pro4-staged",
+  "target": "CC(=O)Oc1ccccc1C(=O)O",
+  "target_smiles": "CC(=O)Oc1ccccc1C(=O)O",
+  "target_id": "aspirin-demo-4",
+  "model": "solar-pro4",
+  "provider": "upstage",
+  "base_url": "https://api.upstage.ai/v1/chat/completions",
+  "output_dir": "runs\\aspirin-demo-4",
+  "manifest_path": "runs\\aspirin-demo-4\\manifest.json",
+  "completed_stages": [
+    "strategies"
+  ],
+  "status": "failed",
+  "failed_stage": "routes",
+  "created_at": "2026-11-18T05:32:29.018161+00:00",
+  "updated_at": "2026-11-18T05:32:29.018167+00:00",
+  "llm_calls": [
+    {
+      "status": "ok",
+      "model": "solar-pro4-260806",
+      "text_len": 366,
+      "tool_call_count": 0,
+      "usage": {
+        "input_tokens": 455,
+        "cached_input_tokens": null,
+        "output_tokens": 168,
+        "thought_tokens": null,
+        "total_tokens": 623
+      },
+      "duration_seconds": 8.045047
+    },
+    {
+      "status": "ok",
+      "model": "solar-pro4-260806",
+      "text_len": 1230,
+      "tool_call_count": 0,
+      "usage": {
+        "input_tokens": 2488,
+        "cached_input_tokens": null,
+        "output_tokens": 335,
+        "thought_tokens": null,
+        "total_tokens": 2823
+      },
+      "duration_seconds": 9.770692
+    },
+    {
+      "status": "ok",
+      "model": "solar-pro4-260806",
+      "text_len": 578,
+      "tool_call_count": 0,
+      "usage": {
+        "input_tokens": 2544,
+        "cached_input_tokens": null,
+        "output_tokens": 154,
+        "thought_tokens": null,
+        "total_tokens": 2698
+      },
+      "duration_seconds": 4.455093
+    },
+    {
+      "status": "ok",
+      "model": "solar-pro4-260806",
+      "text_len": 962,
+      "tool_call_count": 0,
+      "usage": {
+        "input_tokens": 2574,
+        "cached_input_tokens": null,
+        "output_tokens": 240,
+        "thought_tokens": null,
+        "total_tokens": 2814
+      },
+      "duration_seconds": 8.427867
+    },
+    {
+      "status": "ok",
+      "model": "solar-pro4-260806",
+      "text_len": 1134,
+      "tool_call_count": 0,
+      "usage": {
+        "input_tokens": 2544,
+        "cached_input_tokens": null,
+        "output_tokens": 320,
+        "thought_tokens": null,
+        "total_tokens": 2864
+      },
+      "duration_seconds": 7.013933
+    },
+    {
+      "status": "ok",
+      "model": "solar-pro4-260806",
+      "text_len": 841,
+      "tool_call_count": 0,
+      "usage": {
+        "input_tokens": 2692,
+        "cached_input_tokens": null,
+        "output_tokens": 230,
+        "thought_tokens": null,
+        "total_tokens": 2922
+      },
+      "duration_seconds": 2.234701
+    },
+    {
+      "status": "ok",
+      "model": "solar-pro4-260806",
+      "text_len": 824,
+      "tool_call_count": 0,
+      "usage": {
+        "input_tokens": 2734,
+        "cached_input_tokens": null,
+        "output_tokens": 199,
+        "thought_tokens": null,
+        "total_tokens": 2933
+      },
+      "duration_seconds": 3.43629
+    },
+    {
+      "status": "ok",
+      "model": "solar-pro4-260806",
+      "text_len": 1156,
+      "tool_call_count": 0,
+      "usage": {
+        "input_tokens": 2969,
+        "cached_input_tokens": null,
+        "output_tokens": 321,
+        "thought_tokens": null,
+        "total_tokens": 3290
+      },
+      "duration_seconds": 5.831178
+    },
+    {
+      "status": "ok",
+      "model": "solar-pro4-260806",
+      "text_len": 824,
+      "tool_call_count": 0,
+      "usage": {
+        "input_tokens": 3034,
+        "cached_input_tokens": null,
+        "output_tokens": 199,
+        "thought_tokens": null,
+        "total_tokens": 3233
+      },
+      "duration_seconds": 6.597989
+    },
+    {
+      "status": "ok",
+      "model": "solar-pro4-260806",
+      "text_len": 931,
+      "tool_call_count": 0,
+      "usage": {
+        "input_tokens": 3063,
+        "cached_input_tokens": null,
+        "output_tokens": 224,
+        "thought_tokens": null,
+        "total_tokens": 3287
+      },
+      "duration_seconds": 4.341486
+    },
+    {
+      "status": "ok",
+      "model": "solar-pro4-260806",
+      "text_len": 824,
+      "tool_call_count": 0,
+      "usage": {
+        "input_tokens": 3060,
+        "cached_input_tokens": null,
+        "output_tokens": 199,
+        "thought_tokens": null,
+        "total_tokens": 3259
+      },
+      "duration_seconds": 8.519227
+    },
+    {
+      "status": "ok",
+      "model": "solar-pro4-260806",
+      "text_len": 1416,
+      "tool_call_count": 0,
+      "usage": {
+        "input_tokens": 3063,
+        "cached_input_tokens": null,
+        "output_tokens": 362,
+        "thought_tokens": null,
+        "total_tokens": 3425
+      },
+      "duration_seconds": 7.135442
+    },
+    {
+      "status": "ok",
+      "model": "solar-pro4-260806",
+      "text_len": 805,
+      "tool_call_count": 0,
+      "usage": {
+        "input_tokens": 2644,
+        "cached_input_tokens": null,
+        "output_tokens": 203,
+        "thought_tokens": null,
+        "total_tokens": 2847
+      },
+      "duration_seconds": 5.014183
+    },
+    {
+      "status": "ok",
+      "model": "solar-pro4-260806",
+      "text_len": 1029,
+      "tool_call_count": 0,
+      "usage": {
+        "input_tokens": 2706,
+        "cached_input_tokens": null,
+        "output_tokens": 263,
+        "thought_tokens": null,
+        "total_tokens": 2969
+      },
+      "duration_seconds": 5.880159
+    },
+    {
+      "status": "ok",
+      "model": "solar-pro4-260806",
+      "text_len": 1023,
+      "tool_call_count": 0,
+      "usage": {
+        "input_tokens": 3103,
+        "cached_input_tokens": null,
+        "output_tokens": 255,
+        "thought_tokens": null,
+        "total_tokens": 3358
+      },
+      "duration_seconds": 7.85736
+    },
+    {
+      "status": "ok",
+      "model": "solar-pro4-260806",
+      "text_len": 967,
+      "tool_call_count": 0,
+      "usage": {
+        "input_tokens": 3190,
+        "cached_input_tokens": null,
+        "output_tokens": 238,
+        "thought_tokens": null,
+        "total_tokens": 3428
+      },
+      "duration_seconds": 10.210341
+    },
+    {
+      "status": "ok",
+      "model": "solar-pro4-260806",
+      "text_len": 984,
+      "tool_call_count": 0,
+      "usage": {
+        "input_tokens": 3556,
+        "cached_input_tokens": null,
+        "output_tokens": 244,
+        "thought_tokens": null,
+        "total_tokens": 3800
+      },
+      "duration_seconds": 5.998983
+    },
+    {
+      "status": "ok",
+      "model": "solar-pro4-260806",
+      "text_len": 984,
+      "tool_call_count": 0,
+      "usage": {
+        "input_tokens": 3585,
+        "cached_input_tokens": null,
+        "output_tokens": 244,
+        "thought_tokens": null,
+        "total_tokens": 3829
+      },
+      "duration_seconds": 8.854491
+    },
+    {
+      "status": "ok",
+      "model": "solar-pro4-260806",
+      "text_len": 984,
+      "tool_call_count": 0,
+      "usage": {
+        "input_tokens": 3585,
+        "cached_input_tokens": null,
+        "output_tokens": 244,
+        "thought_tokens": null,
+        "total_tokens": 3829
+      },
+      "duration_seconds": 3.5111
+    },
+    {
+      "status": "ok",
+      "model": "solar-pro4-260806",
+      "text_len": 984,
+      "tool_call_count": 0,
+      "usage": {
+        "input_tokens": 3585,
+        "cached_input_tokens": null,
+        "output_tokens": 244,
+        "thought_tokens": null,
+        "total_tokens": 3829
+      },
+      "duration_seconds": 8.169782
+    },
+    {
+      "status": "ok",
+      "model": "solar-pro4-260806",
+      "text_len": 972,
+      "tool_call_count": 0,
+      "usage": {
+        "input_tokens": 3585,
+        "cached_input_tokens": null,
+        "output_tokens": 241,
+        "thought_tokens": null,
+        "total_tokens": 3826
+      },
+      "duration_seconds": 7.201868
+    }
+  ],
+  "stage_results": [
+    {
+      "name": "strategies",
+      "result": {
+        "stages_requested": [
+          "strategies"
+        ],
+        "status": "partial",
+        "completed_stages": [
+          "strategies"
+        ],
+        "run_id": "f028be85be2d9602",
+        "stage_summaries": [
+          {
+            "stage": "strategies",
+            "present": true,
+            "payload_type": "dict",
+            "payload_keys": [
+              "origin",
+              "strategies"
+            ],
+            "duration_seconds": 8.046862
+          }
+        ],
+        "stage_started_at": "2026-11-18T05:27:31.917586+00:00",
+        "stage_duration_seconds": 8.056775,
+        "llm_usage": {
+          "calls": 1,
+          "input_tokens": 455,
+          "cached_input_tokens": 0,
+          "output_tokens": 168,
+          "thought_tokens": 0,
+          "total_tokens": 623
+        }
+      }
+    },
+    {
+      "name": "routes",
+      "result": {
+        "stages_requested": [
+          "routes"
+        ],
+        "status": "failed",
+        "error_type": "ValueError",
+        "error_message": "every item in stage 'routes' failed; first failure was ValueError: Route Builder exhausted 5 proposals for step 1: ValueError: step S1: execute_ops failed: Op [0] add_group: ValueError: add_group(idx=10, '*Cl', order=1) produced an invalid molecule: Explicit valence for atom # 10 C, 5, is greater than permitted\n  op_dict: {'op': 'add_group', 'map_idx': 11, 'fragment_smiles': '*Cl', 'order': 1}",
+        "traceback": "Traceback (most recent call last):\n  File \".\\scripts\\synthex_solar_pro4_run_staged.py\", line 325, in _run_stage\n    manifest = asyncio.run(\n        pipeline.run(\n    ...<6 lines>...\n        )\n    )\n  File \"C:\\Python314\\Lib\\asyncio\\runners.py\", line 205, in run\n    return runner.run(main)\n           ~~~~~~~~~~^^^^^^\n  File \"C:\\Python314\\Lib\\asyncio\\runners.py\", line 128, in run\n    return self._loop.run_until_complete(task)\n           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^\n  File \"C:\\Python314\\Lib\\asyncio\\base_events.py\", line 720, in run_until_complete\n    return future.result()\n           ~~~~~~~~~~~~~^^\n  File \".\\src\\synthex\\pipeline.py\", line 437, in run\n    _require_one_success(routes, active_stage)\n    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^\n  File \".\\src\\synthex\\pipeline.py\", line 74, in _require_one_success\n    raise ValueError(\n    ...<2 lines>...\n    )\nValueError: every item in stage 'routes' failed; first failure was ValueError: Route Builder exhausted 5 proposals for step 1: ValueError: step S1: execute_ops failed: Op [0] add_group: ValueError: add_group(idx=10, '*Cl', order=1) produced an invalid molecule: Explicit valence for atom # 10 C, 5, is greater than permitted\n  op_dict: {'op': 'add_group', 'map_idx': 11, 'fragment_smiles': '*Cl', 'order': 1}\n",
+        "stage_started_at": "2026-11-18T05:29:42.482923+00:00",
+        "stage_duration_seconds": 130.562639
+      }
+    }
+  ],
+  "seed_strategies": null,
+  "stage_status": {
+    "strategies": "partial",
+    "routes": "failed"
+  },
+  "not_started_stages": [
+    "reviewed_routes",
+    "analyses",
+    "stitched_routes"
+  ],
+  "strategy_origin": "generated",
+  "generated_strategies": [
+    "벤조산 유도체와 클로로아세트산의 Friedel-Crafts 아실화를 통해 페닐아세트산 골격을 형성한 후, 생성된 카복실산을 아세틸화하여 목표 분자를 얻는다.",
+    "상업적으로 구입 가능한 페닐아세트산을 출발 물질로 하여, 아세틸 클로라이드와의 직접 O-아실화 반응을 통해 페닐아세트산의 카복실산 산소를 아세틸기로 치환하여 목표 분자를 합성한다.",
+    "벤조산 유도체와 클로로아세트산의 Friedel-Crafts 아실화로 페닐아세트산 골격을 구축한 후, 생성된 카복실산을 메틸 에스터로 보호하여 아실화 반응 중 부반응을 방지한 뒤, 최종 단계에서 에스터를 가수분해하여 목표 분자를 얻는다."
+  ],
+  "failure": {
+    "type": "RuntimeError",
+    "message": "every item in stage 'routes' failed; first failure was ValueError: Route Builder exhausted 5 proposals for step 1: ValueError: step S1: execute_ops failed: Op [0] add_group: ValueError: add_group(idx=10, '*Cl', order=1) produced an invalid molecule: Explicit valence for atom # 10 C, 5, is greater than permitted\n  op_dict: {'op': 'add_group', 'map_idx': 11, 'fragment_smiles': '*Cl', 'order': 1}",
+    "traceback": "RuntimeError: every item in stage 'routes' failed; first failure was ValueError: Route Builder exhausted 5 proposals for step 1: ValueError: step S1: execute_ops failed: Op [0] add_group: ValueError: add_group(idx=10, '*Cl', order=1) produced an invalid molecule: Explicit valence for atom # 10 C, 5, is greater than permitted\n  op_dict: {'op': 'add_group', 'map_idx': 11, 'fragment_smiles': '*Cl', 'order': 1}\n"
+  },
+  "llm_usage": {
+    "calls": 21,
+    "input_tokens": 60759,
+    "cached_input_tokens": 0,
+    "output_tokens": 5127,
+    "thought_tokens": 0,
+    "total_tokens": 65886
+  },
+  "stage_durations_seconds": {
+    "strategies": 8.046862,
+    "routes": 130.549318
+  },
+  "follow_up_experiment": {
+    "output_dir": "runs/aspirin-demo-4-seed",
+    "seed_strategy": "살리실산과 아세트산 무수물의 직접 아실화 반응을 통해 아세틸살리실산 골격을 형성한다.",
+    "strategy_origin": "provided_from_actual_previous_generation",
+    "result": "step 1 route accepted; step 2 rejected because op map ids [11, 12, 13] were not in any frontier molecule",
+    "status": "failed",
+    "note": "This used a real generated strategy as a seed; no route was fabricated."
+  }
+}

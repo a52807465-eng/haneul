@@ -1,0 +1,22 @@
+{
+  "format_version": "routejson-1.0",
+  "target": "[CH3:1][CH2:2][CH2:3][CH2:4][CH2:5][CH3:6]",
+  "steps": [
+    {
+      "id": "S1",
+      "description": "First strategic disconnection",
+      "kind": "key",
+      "operations": [
+        {"op": "break_bond", "map_a": 3, "map_b": 4}
+      ]
+    },
+    {
+      "id": "S2",
+      "description": "Supporting disconnection",
+      "kind": "supporting",
+      "operations": [
+        {"op": "break_bond", "map_a": 1, "map_b": 2}
+      ]
+    }
+  ]
+}

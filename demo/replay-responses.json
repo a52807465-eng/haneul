@@ -1,0 +1,22 @@
+[
+  {
+    "text": "{\"strategies\": [\"Disconnect the central carbon-carbon bond to give two two-carbon fragments.\"]}",
+    "model": "offline-replay"
+  },
+  {
+    "text": "{\"done\": false, \"step\": {\"description\": \"Central carbon-carbon disconnection\", \"operations\": [{\"op\": \"break_bond\", \"map_a\": 2, \"map_b\": 3}], \"kind\": \"key\"}}",
+    "model": "offline-replay"
+  },
+  {
+    "text": "{\"done\": true}",
+    "model": "offline-replay"
+  },
+  {
+    "text": "{\"is_satisfactory\": true, \"overall_feedback\": \"The simulated route is internally consistent.\", \"problematic_steps\": []}",
+    "model": "offline-replay"
+  },
+  {
+    "text": "{\"feasibility_category\": \"acceptable\", \"summary\": \"The simulated one-step route is suitable for demonstrating the workflow.\", \"key_steps\": [\"Central carbon-carbon disconnection\"], \"risks\": [], \"details\": {\"source\": \"offline replay fixture\"}}",
+    "model": "offline-replay"
+  }
+]

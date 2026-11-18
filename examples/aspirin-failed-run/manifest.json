@@ -1,0 +1,157 @@
+{
+  "format_version": "run-manifest-1.0",
+  "run_id": "f028be85be2d9602",
+  "target": "CC(=O)Oc1ccccc1C(=O)O",
+  "target_id": "aspirin-demo-4",
+  "constraint": "가능한 한 짧고 상업적으로 구입 가능한 출발 물질을 사용하는 경로를 탐색하라.",
+  "input_sha256": "5e9cd0c3b6c2d85a03cd3ff17cb75ad99021b4e1e0a5171f100d008015aa5a9a",
+  "config": {
+    "format_version": "synthex-config-1.0",
+    "profile": "manuscript",
+    "llm": {
+      "provider": "gemini",
+      "model": "solar-pro4",
+      "use_vertex_ai": false,
+      "timeout_seconds": 600.0,
+      "max_attempts": 3,
+      "thinking_level": "low"
+    },
+    "agents": {
+      "strategy_count": 3,
+      "route_step_limit": 25,
+      "route_proposal_attempts": 5,
+      "edit_iteration_limit": 6,
+      "editor_turn_limit": 80,
+      "strategy_temperature": 0.1,
+      "route_temperature": 0.1,
+      "critic_temperature": 0.1,
+      "editor_temperature": 0.3,
+      "analyst_temperature": 0.3,
+      "strategy_thinking_level": null,
+      "route_thinking_level": "low",
+      "critic_thinking_level": "low",
+      "editor_thinking_level": "low",
+      "analyst_thinking_level": null
+    },
+    "completion": {
+      "enabled": false,
+      "aizynthfinder_config": null,
+      "stocks": null,
+      "expansion_policies": null,
+      "filter_policies": null,
+      "budget": {
+        "max_transforms": 6,
+        "iteration_limit": 500,
+        "time_limit": 1200,
+        "return_first": true
+      }
+    },
+    "external_asset_manifest": null
+  },
+  "config_sha256": "0e6bdcfe40c5cf74c3df92045df0ce812a628f115ebb92ae6ec101e82ccf145b",
+  "code_revision": "unavailable",
+  "dependency_versions": {
+    "synthex": "not-installed",
+    "aizynthfinder": "not-installed",
+    "google-genai": "not-installed",
+    "pydantic": "2.14.3",
+    "rdkit": "2026.3.6"
+  },
+  "dependency_lock_sha256": "18cfbdff277ea7ec6b65132f77c1370c345873d0ae5aace7444e562e9c900f8b",
+  "provider": "gemini",
+  "model": "solar-pro4",
+  "prompt_versions": {
+    "strategy_generator": "strategy-generator-v1",
+    "route_builder": "route-builder-reactionjson-v2",
+    "critic": "critic-v2-atom-accounting",
+    "editor": "editor-v1",
+    "analyst": "analyst-v1"
+  },
+  "prompt_sha256": {
+    "strategy_generator": "1357100a1e2e13cf8c98c2388c213c061384573e9dec13c2a7a60c56c45226fb",
+    "route_builder": "71395d2ae33f8170627c26bb3f2e20edd37ae3ada2b6a47a7a1b06937ca4c76f",
+    "critic": "d9427d05be57c3d5649c811f0a4be0ad64de683985be7865c16fca6b675c4089",
+    "editor": "42cab75931032edd136585c4d6f4efa56f259a40045154143bf16c6cfbd284ed",
+    "analyst": "d0b8323c1bdffbe0ee6a2cc28cd0a984ec20b127e5c296bdaea6d53c683e871f"
+  },
+  "external_assets": {},
+  "stage_configs": {
+    "strategies": {
+      "format_version": "synthex-config-1.0",
+      "profile": "manuscript",
+      "llm": {
+        "provider": "gemini",
+        "model": "solar-pro4",
+        "use_vertex_ai": false,
+        "timeout_seconds": 600.0,
+        "max_attempts": 3,
+        "thinking_level": "low"
+      },
+      "agents": {
+        "strategy_count": 3,
+        "route_step_limit": 25,
+        "route_proposal_attempts": 5,
+        "edit_iteration_limit": 6,
+        "editor_turn_limit": 80,
+        "strategy_temperature": 0.1,
+        "route_temperature": 0.1,
+        "critic_temperature": 0.1,
+        "editor_temperature": 0.3,
+        "analyst_temperature": 0.3,
+        "strategy_thinking_level": null,
+        "route_thinking_level": "low",
+        "critic_thinking_level": "low",
+        "editor_thinking_level": "low",
+        "analyst_thinking_level": null
+      },
+      "completion": {
+        "enabled": false,
+        "aizynthfinder_config": null,
+        "stocks": null,
+        "expansion_policies": null,
+        "filter_policies": null,
+        "budget": {
+          "max_transforms": 6,
+          "iteration_limit": 500,
+          "time_limit": 1200,
+          "return_first": true
+        }
+      },
+      "external_asset_manifest": null
+    }
+  },
+  "stage_config_sha256": {
+    "strategies": "0e6bdcfe40c5cf74c3df92045df0ce812a628f115ebb92ae6ec101e82ccf145b"
+  },
+  "llm_usage": {
+    "calls": 21,
+    "input_tokens": 60759,
+    "cached_input_tokens": 0,
+    "output_tokens": 5127,
+    "thought_tokens": 0,
+    "total_tokens": 65886
+  },
+  "stage_durations_seconds": {
+    "strategies": 8.046862,
+    "routes": 130.549318
+  },
+  "status": "failed",
+  "current_stage": "routes",
+  "completed_stages": [
+    "strategies"
+  ],
+  "artifacts": {
+    "strategies": {
+      "path": "strategies.json",
+      "sha256": "ae37efee54f403a755fa3ddab8447c9b0a82f3fee2aa82248161bee4edefd1a7",
+      "parent_sha256": null
+    }
+  },
+  "failure": {
+    "stage": "routes",
+    "category": "ValueError",
+    "message": "every item in stage 'routes' failed; first failure was ValueError: Route Builder exhausted 5 proposals for step 1: ValueError: step S1: execute_ops failed: Op [0] add_group: ValueError: add_group(idx=10, '*Cl', order=1) produced an invalid molecule: Explicit valence for atom # 10 C, 5, is greater than permitted\n  op_dict: {'op': 'add_group', 'map_idx': 11, 'fragment_smiles': '*Cl', 'order': 1}"
+  },
+  "created_at": "2026-11-18T05:27:23.863731+00:00",
+  "updated_at": "2026-11-18T05:29:42.477116+00:00"
+}
